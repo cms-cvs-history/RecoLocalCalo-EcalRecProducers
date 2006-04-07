@@ -1,0 +1,8 @@
+  # rechit producer
+  module ecalrechit = EcalRecHitProducer {
+    string uncalibRecHitProducer   = "ecaluncalibrechit"
+    string EBuncalibRecHitCollection = "EcalUncalibRecHitsEB"
+    string EEuncalibRecHitCollection = "EcalUncalibRecHitsEE"
+    string EBrechitCollection        = "EcalRecHitsEB"
+    string EErechitCollection        = "EcalRecHitsEE"
+  }
