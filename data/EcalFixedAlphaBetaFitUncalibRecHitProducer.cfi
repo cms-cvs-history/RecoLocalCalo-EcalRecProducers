@@ -5,4 +5,7 @@
    string EEdigiCollection = ""
    string EBhitCollection  = "EcalUncalibRecHitsEB"
    string EEhitCollection  = "EcalUncalibRecHitsEE"
+   untracked double alpha  = 1.2
+   untracked double beta   = 1.7
+   untracked string AlphaBetaFilename  = "NOFILE"
   }
