@@ -1,8 +1,0 @@
-  # producer of rechits starting from digis
-  module ecaluncalibrechit = EcalAnalFitUncalibRecHitProducer {
-   string digiProducer   = "ecaldigi"
-   string EBdigiCollection = ""
-   string EEdigiCollection = ""
-   string EBhitCollection  = "EcalUncalibRecHitsEB"
-   string EEhitCollection  = "EcalUncalibRecHitsEE"
-  }

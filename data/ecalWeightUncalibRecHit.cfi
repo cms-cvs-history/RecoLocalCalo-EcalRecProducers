@@ -1,0 +1,8 @@
+  # producer of rechits starting from digis
+  module ecalWeightUncalibRecHit = EcalWeightUncalibRecHitProducer {
+   string digiProducer   = "ecalSelectiveReadout"
+   string EBdigiCollection = "ebDigis"
+   string EEdigiCollection = "eeDigis"
+   string EBhitCollection  = "EcalUncalibRecHitsEB"
+   string EEhitCollection  = "EcalUncalibRecHitsEE"
+  }
