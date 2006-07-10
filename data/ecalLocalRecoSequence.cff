@@ -1,0 +1,12 @@
+  # Calo geometry service model
+  include "Geometry/CaloEventSetup/data/CaloGeometry.cfi"
+
+  #ECAL conditions
+  include "CalibCalorimetry/EcalTrivialCondModules/data/EcalTrivialCondRetriever.cfi"
+
+  #ECAL reconstruction
+  include "RecoLocalCalo/EcalRecProducers/data/ecalWeightUncalibRecHit.cfi"
+  include "RecoLocalCalo/EcalRecProducers/data/ecalRecHit.cfi"
+  include "RecoLocalCalo/EcalRecProducers/data/esRecHit.cfi"
+
+  sequence ecalLocalRecoSequence = { ecalWeightUncalibRecHit, ecalRecHit , esRecHit }
