@@ -1,0 +1,8 @@
+  # rechit producer
+  module ecalTBSimRecHit = EcalRecHitProducer {
+    string uncalibRecHitProducer     = "ecalTBSimWeightUncalibRecHit"
+    string EBuncalibRecHitCollection = "EcalUncalibRecHitsEB"
+    string EEuncalibRecHitCollection = "EcalUncalibRecHitsEE"
+    string EBrechitCollection        = "EcalRecHitsEB"
+    string EErechitCollection        = "EcalRecHitsEE"
+  }
