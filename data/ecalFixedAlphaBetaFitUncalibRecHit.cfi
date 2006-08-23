@@ -1,8 +1,7 @@
   # producer of rechits starting from digis
   module ecalFixedAlphaBetaFitUncalibRecHit =  EcalFixedAlphaBetaFitUncalibRecHitProducer{
-   string digiProducer   = "ecalDigis"
-   string EBdigiCollection = "ebDigis"
-   string EEdigiCollection = "eeDigis"
+   InputTag EBdigiCollection = ecalDigis:ebDigis
+   InputTag EEdigiCollection = ecalDigis:eeDigis
    string EBhitCollection  = "EcalUncalibRecHitsEB"
    string EEhitCollection  = "EcalUncalibRecHitsEE"
    untracked double alpha  = 1.2
