@@ -1,0 +1,57 @@
+es_source ecalConditions = PoolDBESSource  
+{ 
+    VPSet toGet = {
+	{ string record = "EcalIntercalibConstantsRcd"
+	    string tag = "miscalib0.00" },
+	{ string record = "EcalPedestalsRcd"
+	    string tag = "EcalPedestals_trivial" },
+	{ string record = "EcalADCToGeVConstantRcd"
+	    string tag = "EcalADCToGeVConstant_trivial" },
+	{ string record = "EcalGainRatiosRcd"
+	    string tag = "EcalGainRatios_trivial" },
+	#                                       { string record = "EcalIntercalibConstantsRcd"
+	#                                         string tag = "EcalIntercalibConstants_trivial" },
+	{ string record = "EcalWeightXtalGroupsRcd"
+	    string tag = "EcalWeightXtalGroups_trivial" },
+	{ string record = "EcalTBWeightsRcd"
+	    string tag = "EcalTBWeights_trivial" }
+	
+	#,
+	#{ string record = "EcalIntercalibConstantsRcd"
+	#  string tag = "miscalib0.04" }
+	#,
+	#{ string record = "EcalIntercalibConstantsRcd"
+	#  string tag = "miscalibINV0.04" }
+    }
+    string connect = "oracle://cms_orcoff_int2r/CMS_COND_ECAL"
+    untracked string catalog = "relationalcatalog_oracle://cms_orcoff_int2r/CMS_COND_GENERAL"
+    untracked uint32 authenticationMethod = 1
+    string timetype = "runnumber"
+    untracked uint32 messagelevel = 2 
+}
+
+
+module getEcalConditions_orcoffint2r = EventSetupRecordDataGetter 
+{ 
+    VPSet toGet = {
+	{ string record = "EcalIntercalibConstantsRcd"
+	    vstring data = {"EcalIntercalibConstants"}
+	},
+                         { string record = "EcalPedestalsRcd"
+	    vstring data = {"EcalPedestals"}
+	},
+                         { string record = "EcalADCToGeVConstantRcd"
+	    vstring data = {"EcalADCToGeVConstant"}
+	},
+                         { string record = "EcalGainRatiosRcd"
+	    vstring data = {"EcalGainRatios"}
+	},
+                         { string record = "EcalWeightXtalGroupsRcd"
+	    vstring data = {"EcalWeightXtalGroups"}
+	},
+                         { string record = "EcalTBWeightsRcd"
+	    vstring data = {"EcalTBWeights"}
+	}
+    }
+                   untracked bool verbose = true 
+}

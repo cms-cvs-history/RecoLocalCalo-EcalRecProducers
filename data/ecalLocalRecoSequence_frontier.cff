@@ -1,0 +1,13 @@
+# Calo geometry service model
+include "Geometry/CaloEventSetup/data/CaloGeometry.cfi"
+
+#ECAL conditions
+include "RecoLocalCalo/EcalRecProducers/data/getEcalConditions_frontier.cff"
+
+#ECAL reconstruction
+include "RecoLocalCalo/EcalRecProducers/data/ecalWeightUncalibRecHit.cfi"
+include "RecoLocalCalo/EcalRecProducers/data/ecalRecHit.cfi"
+include "RecoLocalCalo/EcalRecProducers/data/ecalPreshowerRecHit.cfi"
+
+sequence ecalLocalRecoSequence = { getEcalConditions_frontier, ecalWeightUncalibRecHit, ecalRecHit , ecalPreshowerRecHit }
+
