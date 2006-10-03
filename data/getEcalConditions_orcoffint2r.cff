@@ -8,13 +8,13 @@ es_source ecalConditions = PoolDBESSource
 	{ string record = "EcalADCToGeVConstantRcd"
 	    string tag = "EcalADCToGeVConstant_trivial" },
 	{ string record = "EcalGainRatiosRcd"
-	    string tag = "EcalGainRatios_trivial" },
+	    string tag = "EcalGainRatios_trivial" }
 	#                                       { string record = "EcalIntercalibConstantsRcd"
 	#                                         string tag = "EcalIntercalibConstants_trivial" },
-	{ string record = "EcalWeightXtalGroupsRcd"
-	    string tag = "EcalWeightXtalGroups_trivial" },
-	{ string record = "EcalTBWeightsRcd"
-	    string tag = "EcalTBWeights_trivial" }
+#	{ string record = "EcalWeightXtalGroupsRcd"
+#	    string tag = "EcalWeightXtalGroups_trivial" },
+#	{ string record = "EcalTBWeightsRcd"
+#	    string tag = "EcalTBWeights_trivial" }
 	
 	#,
 	#{ string record = "EcalIntercalibConstantsRcd"
@@ -30,6 +30,17 @@ es_source ecalConditions = PoolDBESSource
     untracked uint32 messagelevel = 2 
 }
 
+es_source src2 = EcalTrivialConditionRetriever 
+{
+    untracked bool producedEcalWeights = true
+    untracked bool producedEcalPedestals = false
+    untracked bool producedEcalIntercalibConstants = false
+    untracked bool producedEcalGainRatios = false
+    untracked bool producedEcalADCToGeVConstant = false
+    untracked bool weightsForTB = false
+    #       If set true reading optimized weights (3+5 weights) from file 
+    untracked bool getWeightsFromFile = true
+}
 
 module getEcalConditions_orcoffint2r = EventSetupRecordDataGetter 
 { 
