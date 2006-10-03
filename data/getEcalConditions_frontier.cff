@@ -25,9 +25,9 @@ es_source ecalConditions = PoolDBESSource
     }
     string connect = "frontier://cms_conditions_data/CMS_COND_ECAL"
     untracked bool siteLocalConfig = true
-    untracked uint32 authenticationMethod = 0
+    untracked uint32 authenticationMethod = 1
     string timetype = "runnumber"
-    untracked uint32 messagelevel = 2 
+    untracked uint32 messagelevel = 0 
 }
 
 
