@@ -7,6 +7,6 @@
 <use name=boost>
 <use name=root>
 <use name=CalibCalorimetry/EcalTrivialCondModules>
-<flags SEAL_PLUGIN_NAME="testEcalLocalReco">
+<flags EDM_PLUGIN=1>
 <library file=EcalLocalRecoTask.cc name=testEcalLocalReco>
 </library>
