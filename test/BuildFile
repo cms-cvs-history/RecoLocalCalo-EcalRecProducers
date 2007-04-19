@@ -2,11 +2,13 @@
 <use name=DataFormats/EcalDigi>
 <use name=DataFormats/EcalRecHit>
 <use name=SimDataFormats/CaloHit>
+<use name=SimDataFormats/CrossingFrame>
 <use name=FWCore/Framework>
 <use name=DQMServices/CoreROOT>
 <use name=boost>
 <use name=root>
-<use name=CalibCalorimetry/EcalTrivialCondModules>
+<use name=CondFormats/EcalObjects>
+<use name=CondFormats/DataRecord>
 <flags EDM_PLUGIN=1>
 <library file=EcalLocalRecoTask.cc name=testEcalLocalReco>
 </library>
