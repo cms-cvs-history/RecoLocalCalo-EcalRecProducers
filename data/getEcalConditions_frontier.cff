@@ -1,8 +1,11 @@
+include "CondCore/DBCommon/data/CondDBSetup.cfi"
+
 es_source ecalConditions = PoolDBESSource  
 { 
+    using CondDBSetup
     VPSet toGet = {
 	{ string record = "EcalIntercalibConstantsRcd"
-	    string tag = "miscalib0.00" },
+	    string tag = "EcalIntercalibConstants_trivial" },
 	{ string record = "EcalPedestalsRcd"
 	    string tag = "EcalPedestals_trivial" },
 	{ string record = "EcalADCToGeVConstantRcd"
