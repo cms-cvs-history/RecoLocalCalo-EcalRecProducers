@@ -6,5 +6,7 @@
    string EEhitCollection  = "EcalUncalibRecHitsEE"
    untracked double alpha  = 1.2
    untracked double beta   = 1.7
+   double MinAmplBarrel	= 8.
+   double MinAmplEndcap	= 16.
    untracked string AlphaBetaFilename  = "NOFILE"
   }
