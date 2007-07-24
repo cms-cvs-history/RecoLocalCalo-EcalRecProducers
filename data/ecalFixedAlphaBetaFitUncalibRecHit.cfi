@@ -7,7 +7,7 @@
    double alpha  = 1.2
    double beta   = 1.7
    double MinAmplBarrel	= 8.
-   double MinAmplEndcap	= 16.
+   double MinAmplEndcap	= 8.
    bool UseDynamicPedestal = true
    untracked string AlphaBetaFilename  = "NOFILE"
   }
