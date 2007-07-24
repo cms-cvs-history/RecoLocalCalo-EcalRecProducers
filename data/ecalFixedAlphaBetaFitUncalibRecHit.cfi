@@ -4,9 +4,10 @@
    InputTag EEdigiCollection = ecalDigis:eeDigis
    string EBhitCollection  = "EcalUncalibRecHitsEB"
    string EEhitCollection  = "EcalUncalibRecHitsEE"
-   untracked double alpha  = 1.2
-   untracked double beta   = 1.7
+   double alpha  = 1.2
+   double beta   = 1.7
    double MinAmplBarrel	= 8.
    double MinAmplEndcap	= 16.
+   bool UseDynamicPedestal = true
    untracked string AlphaBetaFilename  = "NOFILE"
   }
