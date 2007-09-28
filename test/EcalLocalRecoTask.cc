@@ -1,7 +1,7 @@
 /*
  * \file EcalLocalReco.cc
  *
- * $Id: EcalLocalRecoTask.cc,v 1.4 2007/08/06 14:44:56 innocent Exp $
+ * $Id: EcalLocalRecoTask.cc,v 1.5 2007/09/11 09:03:42 fabiocos Exp $
  *
 */
 
@@ -27,6 +27,8 @@
 #include "SimDataFormats/CrossingFrame/interface/MixCollection.h"
 
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
+
+#include "SimDataFormats/CaloHit/interface/PCaloHitContainer.h"
 
 EcalLocalRecoTask::EcalLocalRecoTask(const ParameterSet& ps)
 {
