@@ -1,0 +1,14 @@
+module  ecalSimpleUncalibRecHitFiler  = EcalSimpleUncalibRecHitFilter
+{
+    InputTag EcalUncalibRecHitCollection = ecalWeightUncalibRecHit:EcalUncalibRecHitsEB
+    
+    untracked double adcCut = 12.
+
+    #
+    untracked vint32 maskedChannels      = { }
+    # this is for EB+18, GRES
+    #untracked vint32 maskedChannels      = {139, 534, 1685}
+    
+    # this is for EB+15, GREA
+    #    untracked vint32 maskedChannels      = {888}
+}

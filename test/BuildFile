@@ -9,6 +9,10 @@
 <use name=root>
 <use name=CondFormats/EcalObjects>
 <use name=CondFormats/DataRecord>
-<flags EDM_PLUGIN=1>
+
 <library file=EcalLocalRecoTask.cc name=testEcalLocalReco>
+<flags EDM_PLUGIN=1>
+</library>
+<library file=stubs/EcalSimpleUncalibRecHitFilter.cc name=EcalSimpleUncalibRecHitFilter>
+<flags EDM_PLUGIN=1>
 </library>
