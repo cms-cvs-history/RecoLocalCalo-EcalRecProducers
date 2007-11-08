@@ -21,8 +21,8 @@ es_source ecalConditions = PoolDBESSource
 	    string tag = "EcalLaserAlphas_trivial" },
 	{ string record = "EcalLaserAPDPNRatiosRcd" 
 	    string tag = "EcalLaserAPDPNRatios_trivial" },
-	{ string record = "EcalLaserAPDPNRatiosRefRcd" 
-	}
+        { string record = "EcalLaserAPDPNRatiosRefRcd" 
+	    string tag = "EcalLaserAPDPNRatiosRef_trivial" }
     }
     string connect = "frontier://cms_conditions_data/CMS_COND_ECAL"
     untracked bool siteLocalConfig = true
