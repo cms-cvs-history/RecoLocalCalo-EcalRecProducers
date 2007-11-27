@@ -13,6 +13,6 @@
 <library file=EcalLocalRecoTask.cc name=testEcalLocalReco>
 <flags EDM_PLUGIN=1>
 </library>
-<library file=stubs/EcalSimpleUncalibRecHitFilter.cc name=EcalSimpleUncalibRecHitFilter>
+<library file=stubs/EcalBasicUncalibRecHitFilter.cc name=EcalBasicUncalibRecHitFilter>
 <flags EDM_PLUGIN=1>
 </library>
