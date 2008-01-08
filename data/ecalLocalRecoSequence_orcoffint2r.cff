@@ -9,4 +9,4 @@ include "RecoLocalCalo/EcalRecProducers/data/ecalWeightUncalibRecHit.cfi"
 include "RecoLocalCalo/EcalRecProducers/data/ecalRecHit.cfi"
 include "RecoLocalCalo/EcalRecProducers/data/ecalPreshowerRecHit.cfi"
 
-sequence ecalLocalRecoSequence = { getEcalConditions_orcoffint2r, ecalWeightUncalibRecHit, ecalRecHit , ecalPreshowerRecHit }
+sequence ecalLocalRecoSequence = { ecalWeightUncalibRecHit, ecalRecHit , ecalPreshowerRecHit }
