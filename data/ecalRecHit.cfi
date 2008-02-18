@@ -4,4 +4,6 @@
     InputTag EEuncalibRecHitCollection = ecalWeightUncalibRecHit:EcalUncalibRecHitsEE
     string EBrechitCollection        = "EcalRecHitsEB"
     string EErechitCollection        = "EcalRecHitsEE"
+    # channel flags to be exluded from reconstruction, e.g { 1, 2 }
+    vint32 ChannelStatusToBeExcluded = { } 
   }
