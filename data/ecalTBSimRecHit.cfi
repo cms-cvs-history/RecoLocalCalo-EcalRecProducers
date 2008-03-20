@@ -4,4 +4,5 @@
     InputTag EEuncalibRecHitCollection = ecalTBSimWeightUncalibRecHit:EcalUncalibRecHitsEE
     string EBrechitCollection        = "EcalRecHitsEB"
     string EErechitCollection        = "EcalRecHitsEE"
+    vint32 ChannelStatusToBeExcluded = { } 
   }
