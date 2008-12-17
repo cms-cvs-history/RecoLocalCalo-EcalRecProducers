@@ -1,7 +1,0 @@
-  # producer of rechits starting from digis
-  module ecalAnalFitUncalibRecHit = EcalAnalFitUncalibRecHitProducer {
-   InputTag EBdigiCollection = ecalDigis:ebDigis
-   InputTag EEdigiCollection = ecalDigis:eeDigis
-   string EBhitCollection  = "EcalUncalibRecHitsEB"
-   string EEhitCollection  = "EcalUncalibRecHitsEE"
-  }

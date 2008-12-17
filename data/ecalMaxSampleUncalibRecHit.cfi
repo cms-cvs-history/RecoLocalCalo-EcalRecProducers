@@ -1,7 +1,0 @@
-module ecalMaxSampleUncalibRecHit = EcalMaxSampleUncalibRecHitProducer
-{
-    InputTag EBdigiCollection = ecalEBunpacker:ebDigis
-    InputTag EEdigiCollection = ecalEBunpacker:eeDigis
-    string EBhitCollection    = "EcalUncalibRecHitsEB"
-    string EEhitCollection    = "EcalUncalibRecHitsEE"
-}
