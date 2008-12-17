@@ -1,8 +1,0 @@
-  # producer of rechits starting from digis
-module ecalWeightUncalibRecHit = EcalWeightUncalibRecHitProducer 
-{
-    InputTag EBdigiCollection = ecalDigis:ebDigis
-    InputTag EEdigiCollection = ecalDigis:eeDigis
-    string EBhitCollection  = "EcalUncalibRecHitsEB"
-    string EEhitCollection  = "EcalUncalibRecHitsEE"
-}
