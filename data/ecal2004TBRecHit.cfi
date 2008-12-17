@@ -1,7 +1,0 @@
-  # rechit producer
-  module ecal2004TBRecHit = EcalRecHitProducer {
-    InputTag EBuncalibRecHitCollection = ecal2004TBWeightUncalibRecHit:EcalUncalibRecHitsEB
-    InputTag EEuncalibRecHitCollection = ""
-    string EBrechitCollection        = "EcalRecHitsEB"
-    string EErechitCollection        = ""
-  }
