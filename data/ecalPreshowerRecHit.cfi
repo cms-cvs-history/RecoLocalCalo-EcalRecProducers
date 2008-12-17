@@ -1,5 +1,0 @@
-  # Ecal Preshower rechit producer
-  module ecalPreshowerRecHit = ESRecHitProducer {
-    InputTag ESdigiCollection = ecalPreshowerDigis
-    string ESrechitCollection        = "EcalRecHitsES"
-}
