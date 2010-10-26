@@ -4,9 +4,9 @@
 /** \class EcalRecHitSimpleAlgo
   *  Simple algoritm to make rechits from uncalibrated rechits
   *
-  *  $Id: EcalRecHitWorkerRecover.h,v 1.5 2010/09/29 15:31:27 ferriff Exp $
-  *  $Date: 2010/09/29 15:31:27 $
-  *  $Revision: 1.5 $
+  *  $Id: EcalRecHitWorkerRecover.h,v 1.2 2009/06/05 13:40:52 ferriff Exp $
+  *  $Date: 2009/06/05 13:40:52 $
+  *  $Revision: 1.2 $
   *  \author Shahram Rahatlou, University of Rome & INFN, March 2006
   */
 
@@ -39,7 +39,6 @@ class EcalRecHitWorkerRecover : public EcalRecHitWorkerBaseClass {
         protected:
 
                 void insertRecHit( const EcalRecHit &hit, EcalRecHitCollection &collection );
-                bool alreadyInserted( const DetId & id );
 
                 //edm::ESHandle<EcalIntercalibConstants> ical;
                 //edm::ESHandle<EcalTimeCalibConstants> itime;
@@ -52,34 +51,23 @@ class EcalRecHitWorkerRecover : public EcalRecHitWorkerBaseClass {
                 edm::ESHandle<CaloTopology> caloTopology_;
                 double singleRecoveryThreshold_;
                 std::string singleRecoveryMethod_;
+                bool recoverDeadVFE_;
                 bool killDeadChannels_;
-
-                bool recoverEBIsolatedChannels_;
-                bool recoverEEIsolatedChannels_;
-                bool recoverEBVFE_;
-                bool recoverEEVFE_;
-                bool recoverEBFE_;
-                bool recoverEEFE_;
 
                 // dead FE
                 EcalTPGScale ecalScale_;
                 edm::InputTag tpDigiCollection_;
                 edm::ESHandle< EcalElectronicsMapping > pEcalMapping_;
                 const EcalElectronicsMapping *ecalMapping_;
-		double logWarningEtThreshold_EB_FE_;
-		double logWarningEtThreshold_EE_FE_;
 
                 edm::ESHandle<EcalTrigTowerConstituentsMap> ttMap_;
- 
+                
                 edm::ESHandle<CaloSubdetectorGeometry> pEBGeom_;
                 edm::ESHandle<CaloSubdetectorGeometry> pEEGeom_;
                 const CaloSubdetectorGeometry * ebGeom_;
                 const CaloSubdetectorGeometry * eeGeom_;
 
                 EcalRecHitSimpleAlgo * rechitMaker_;
-
-                std::set<DetId> recoveredDetIds_EB_;
-                std::set<DetId> recoveredDetIds_EE_;
 };
 
 #endif

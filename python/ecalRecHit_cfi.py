@@ -31,14 +31,8 @@ ecalRecHit = cms.EDProducer("EcalRecHitProducer",
     recoverEEIsolatedChannels = cms.bool(False),
     recoverEBVFE  = cms.bool(False),
     recoverEEVFE  = cms.bool(False),
-    recoverEBFE = cms.bool(True),
+    recoverEBFE = cms.bool(False),
     recoverEEFE = cms.bool(False),
-    # --- logWarnings for saturated DeadFEs
-    # if the logWarningThreshold is negative the Algo will not try recovery (in EE is not tested we may need negative threshold e.g. -1.e+9)
-    # if you want to enable recovery but you don't wish to throw logWarnings put the logWarningThresholds very high e.g +1.e+9
-    #  ~64 GeV is the TP saturation level
-    logWarningEtThreshold_EB_FE = cms.double(50),# in EB logWarningThreshold is actually in E (GeV)
-    logWarningEtThreshold_EE_FE = cms.double(50),# in EE the energy should correspond to Et (GeV) but the recovered values of energies are not tested if make sense
     ebDetIdToBeRecovered = cms.InputTag("ecalDetIdToBeRecovered:ebDetId"),
     eeDetIdToBeRecovered = cms.InputTag("ecalDetIdToBeRecovered:eeDetId"),
     ebFEToBeRecovered = cms.InputTag("ecalDetIdToBeRecovered:ebFE"),
