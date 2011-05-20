@@ -1,9 +1,9 @@
 /** \class EcalRecHitProducer
  *   produce ECAL rechits from uncalibrated rechits
  *
- *  $Id: EcalRecHitProducer.cc,v 1.13 2010/09/29 15:31:27 ferriff Exp $
- *  $Date: 2010/09/29 15:31:27 $
- *  $Revision: 1.13 $
+ *  $Id: EcalRecHitProducer.cc,v 1.15 2011/02/15 20:13:35 argiro Exp $
+ *  $Date: 2011/02/15 20:13:35 $
+ *  $Revision: 1.15 $
  *  \author Shahram Rahatlou, University of Rome & INFN, March 2006
  *
  **/
@@ -263,18 +263,26 @@ EcalRecHitProducer::produce(edm::Event& evt, const edm::EventSetup& es)
                 }
         }
 
+	// if not sorted, find will not work
+	ebRecHits->sort();
+        eeRecHits->sort();
 
 	// cleaning of anomalous signals, aka spikes
 	EcalRecHitCollection::iterator rh;
 	for (rh=ebRecHits->begin(); rh!=ebRecHits->end(); ++rh){
 	  EcalRecHit::Flags state=cleaningAlgo_->checkTopology(rh->id(),*ebRecHits);
-	  if (state!=EcalRecHit::kGood) rh->setFlag(state);
-
+	  if (state!=EcalRecHit::kGood) { 
+	    rh->unsetFlag(EcalRecHit::kGood);
+	    rh->setFlag(state);
+	  }
 	}
 	
 	for (rh=eeRecHits->begin(); rh!=eeRecHits->end(); ++rh){
 	  EcalRecHit::Flags state=cleaningAlgo_->checkTopology(rh->id(),*eeRecHits);
-	  if (state!=EcalRecHit::kGood) rh->setFlag(state);
+	  if (state!=EcalRecHit::kGood) {
+	    rh->unsetFlag(EcalRecHit::kGood);
+	    rh->setFlag(state);
+	  }
 	}
 
         // put the collection of recunstructed hits in the event   
